@@ -1,5 +1,5 @@
 {
-    "name": "smtech/canvashack-plugin-sort-rubric-import-contexts",
+    "name": "canvashack/plugin-sort-rubric-import-contexts",
     "description": "Since Canvas hasn't come up with a design for organizing the rubric import course list, this is it",
     "type": "canvasshack-plugin",
     "license": "GPL-3.0",
