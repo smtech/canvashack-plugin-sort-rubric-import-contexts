@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<canvashack>
+	<name>Sort Rubric Import Contexts</name>
+	<id>sort-rubric-import-contexts</id>
+	<description>Since Canvas hasn't come up with a design for organizing the rubric import course list, this is it</description>
+	<authors>
+		<author>
+			<name>Seth Battis</name>
+			<email>SethBattis@stmarksschool.org</email>
+		</author>
+	</authors>
+	<components>
+		<javascript>sort-rubric-import-contexts.js</javascript>
+		<canvas>
+			<pages>
+				<include>
+					<page>
+						<type>regex</type>
+						<pattern>%courses/\d+/assignments/\d+%</pattern>
+					</page>
+				</include>
+			</pages>
+			<dom>
+				<bundle>
+					<event>load</event>
+					<action>sort()</action>
+					<selector>.rubrics_dialog_contexts_select</selector>
+				</bundle>
+			</dom>
+		</canvas>
+	</components>
+</canvashack>
