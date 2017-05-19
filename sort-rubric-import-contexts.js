@@ -20,7 +20,6 @@ var canvashack = {
             }, 10);
             if (!this.sorted) {
                 this.sorted = true;
-                console.log('sorting');
                 $('.rubrics_dialog_contexts_select').html(
                     $('.rubrics_dialog_contexts_select').children('li').sort(
                         function(a,b) {
