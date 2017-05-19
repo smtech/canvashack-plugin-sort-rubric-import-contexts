@@ -23,7 +23,7 @@
 			<dom>
 				<bundle>
 					<event>load</event>
-					<action>sort()</action>
+					<action>temporaryBind()</action>
 					<selector>.rubrics_dialog_contexts_select</selector>
 				</bundle>
 			</dom>
