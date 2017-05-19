@@ -1,17 +1,17 @@
 var canvashack = {
     sort: function() {
+        "use strict";
         $('.rubrics_dialog_contexts_select').html(
             $('.rubrics_dialog_contexts_select').children('li').sort(
                 function(a,b) {
-                    var
-                        numbers = /^[0-9]/,
-                        letters = /^[a-z]/i,
-                        left = $(a).text().trim(),
-                        right = $(b).text().trim();
-                    console.log(left + ' / ' + right);
-                    if (numbers.test(left) && letters.test(right)) {
+                    var archived = /^\d{4,4}-\d{4,4}/;
+                    var left = $(a).text().trim();
+                    var right = $(b).text().trim();
+
+                    if (archived.test(left) && !archived.test(right)) {
                         return 1;
-                    } else if (numbers.test(right) && letters.test(left)) {
+                    }
+                    if (archived.test(right) && !archived.test(left)) {
                         return -1;
                     }
                     return left.localeCompare(
@@ -23,4 +23,4 @@ var canvashack = {
             )
         );
     }
-}
+};
